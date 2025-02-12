@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light theme */
+body.light {
+    background-color: white; /* Light background */
+    color: #000; /* Dark text color for contrast */
+  }
+  
+  /* Dark theme */
+  body.dark {
+    background-color: #333; /* Dark background */
+    color: #fff; /* Light text color for contrast */
+  }
+  
+
+/*lora-regular font*/
+.lora-regular {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}

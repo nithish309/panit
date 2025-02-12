@@ -1,0 +1,33 @@
+
+/* Initial hidden state */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+ 
+  .hero-content {
+    flex-direction: column; 
+    text-align: center; 
+  }
+
+  h1 {
+    font-size: 1.5rem; 
+  }
+
+  p {
+    font-size: 1rem; 
+  }
+
+  button {
+    width: 100%; 
+  }
+
+  video {
+    max-width: 100%;
+    height: auto;
+    
+  }
+}
