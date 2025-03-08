@@ -70,6 +70,31 @@ const Products = ({ setCartItems, theme }) => {
     }
   };
 
+  if(loading){
+    return (
+      <div>
+      <div className="flex justify-center items-center h-screen">
+        <LoadingSpinner />
+      </div>
+      {theme === "dark" ? <hr /> : null}
+      </div>
+      
+    );
+  }
+  else{
+    if (error) {
+      return <div>
+        <div className="flex justify-center items-center h-screen">
+        <p className="text-center mt-10 font-bold lg:text-2xl text-lg">
+          {error}
+        </p>
+        </div>
+        {theme === "dark" ? <hr /> : null}
+
+    </div>
+    }
+  }
+
   return (
     <div>
       <section
@@ -95,14 +120,6 @@ const Products = ({ setCartItems, theme }) => {
             />
           </div>
         </div>
-
-        {loading ? (
-          <LoadingSpinner />
-        ) : error ? (
-          <p className="text-center mt-10 font-bold lg:text-2xl text-lg">
-            {error}
-          </p>
-        ) : (
           <div className="flex flex-wrap justify-center lg:gap-20 lg:mt-5 lg:mb-20 mb-10 mt-5 sm:gap-0">
             {filteredProducts.length > 0 ? (
               filteredProducts.map((product) => (
@@ -153,7 +170,7 @@ const Products = ({ setCartItems, theme }) => {
               </p>
             )}
           </div>
-        )}
+        
       </section>
       {theme === "dark" ? <hr /> : null}
     </div>
