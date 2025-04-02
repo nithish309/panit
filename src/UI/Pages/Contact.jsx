@@ -44,7 +44,7 @@ const Contact = ({ theme }) => {
       };
     
       emailjs
-        .send('service_gzi0mnc', 'template_i1ys5wg', emailParams, 'Bd9DrMKN3xYbRF1lK')
+        .send('service_gzi0mnc', 'template_i1ys5wg', emailParams, 'BRv2FBMqGdFiszEng')
         .then((response) => {
           console.log('EmailJS Response:', response);
           console.log('SUCCESS!', response.status, response.text);

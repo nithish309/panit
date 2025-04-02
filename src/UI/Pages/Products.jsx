@@ -165,9 +165,11 @@ const Products = ({ setCartItems, theme }) => {
                 </div>
               ))
             ) : (
+              <div className="flex justify-center items-center h-screen">
               <p className="text-center mt-10 font-bold lg:text-2xl text-lg">
                 No products found
               </p>
+              </div>
             )}
           </div>
         
