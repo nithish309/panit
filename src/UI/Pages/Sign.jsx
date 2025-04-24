@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
-const Sign = () => {
+const Sign = ({theme}) => {
   const REGISTER_URL = import.meta.env.VITE_REGISTER_URL;
   const navigate = useNavigate();
 
@@ -56,9 +56,13 @@ const Sign = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-400 to-purple-500">
-      <div className="p-8 rounded-lg shadow-lg bg-white dark:bg-gray-800 w-full max-w-md">
-        <h2 className="text-3xl font-bold text-center text-blue-800 dark:text-white mb-6">
+    <div className="min-h-screen flex items-center justify-center"style={{ backgroundColor: theme === "light" ? "white" : "black",
+      color: theme === "light" ? "black" : "#fff"
+     }}>
+      <div className="p-8 rounded-lg shadow-lg w-full max-w-md"style={{ backgroundColor: theme === "light" ? "white" : "#333",
+      color: theme === "light" ? "black" : "#fff"
+     }}>
+        <h2 className="text-3xl font-bold text-center text-blue-800 mb-6">
           Sign Up to Paint Shop
         </h2>
 
@@ -67,41 +71,47 @@ const Sign = () => {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+            <label className="block text-sm font-medium text-gray-700">Email</label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               required
-              className="input input-bordered w-full dark:bg-gray-700 dark:text-white"
-              placeholder="Enter your email"
+              className="input input-bordered w-full"
+              style={{ backgroundColor: theme === "light" ? "white" : "black",
+                color: theme === "light" ? "black" : "#fff"
+               }}
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Password</label>
+            <label className="block text-sm font-medium text-gray-700">Password</label>
             <input
               type="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
               required
-              className="input input-bordered w-full dark:bg-gray-700 dark:text-white"
-              placeholder="Enter your password"
+              className="input input-bordered w-full"
+              style={{ backgroundColor: theme === "light" ? "white" : "black",
+                color: theme === "light" ? "black" : "#fff"
+               }}
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Confirm Password</label>
+            <label className="block text-sm font-medium text-gray-700">Confirm Password</label>
             <input
               type="password"
               name="confirmPassword"
               value={formData.confirmPassword}
               onChange={handleChange}
               required
-              className="input input-bordered w-full dark:bg-gray-700 dark:text-white"
-              placeholder="Confirm your password"
+              className="input input-bordered w-full"
+              style={{ backgroundColor: theme === "light" ? "white" : "black",
+                color: theme === "light" ? "black" : "#fff"
+               }}
             />
           </div>
 
@@ -109,7 +119,7 @@ const Sign = () => {
             Already have an account? logIn
           </Link>
 
-          <button type="submit" className="btn btn-primary w-full" disabled={loading}>
+          <button type="submit" className="btn btn-success w-full" disabled={loading}>
             {loading ? 'Signing Up...' : 'Sign Up'}
           </button>
         </form>

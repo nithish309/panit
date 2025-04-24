@@ -151,12 +151,22 @@ const Products = ({ setCartItems, theme }) => {
                       <Link
                         to={`/product/${product._id}`}
                         className="btn btn lora-regular"
+                        style={{
+                          backgroundColor: theme === "light" ? "blue" : "blue",
+                          color: theme === "light" ? "#fff" : "#fff",
+    
+                        }}
                       >
                         View
                       </Link>
                       <button
                         onClick={() => handleAddToCart(product)}
                         className="btn btn lora-regular"
+                        style={{
+                          backgroundColor: theme === "light" ? "green" : "green",
+                          color: theme === "light" ? "#fff" : "#fff",
+    
+                        }}
                       >
                         Add
                       </button>

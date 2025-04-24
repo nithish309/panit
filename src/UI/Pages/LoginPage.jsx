@@ -27,8 +27,12 @@ const Login = ({ theme,login }) => {
   };
 
   return (
-    <div className={`flex items-center justify-center min-h-screen ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
-      <div className="w-full max-w-md p-8 space-y-6 rounded-lg shadow-md bg-gray-100 dark:bg-gray-800">
+    <div className="flex items-center justify-center min-h-screen" style={{ backgroundColor: theme === "light" ? "white" : "black",
+      color: theme === "light" ? "black" : "#fff"
+     }}>
+      <div className="w-full max-w-md p-8 space-y-6 rounded-lg shadow-md" style={{ backgroundColor: theme === "light" ? "#e5e6e6" : "#333",
+      color: theme === "light" ? "black" : "#fff"
+     }}>
         <h2 className="text-3xl font-bold text-center">Login</h2>
 
         {error && <p className="text-red-500 text-center">{error}</p>}
@@ -38,7 +42,9 @@ const Login = ({ theme,login }) => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="input input-bordered w-full dark:bg-gray-700 dark:text-white"
+              className="input input-bordered w-full " style={{ backgroundColor: theme === "light" ? "white" : "black",
+                color: theme === "light" ? "black" : "#fff"
+               }}
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -49,7 +55,9 @@ const Login = ({ theme,login }) => {
             <input
               type="password"
               placeholder="Enter your password"
-              className="input input-bordered w-full dark:bg-gray-700 dark:text-white"
+              className="input input-bordered w-full " style={{ backgroundColor: theme === "light" ? "white" : "black",
+                color: theme === "light" ? "black" : "#fff"
+               }}
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}

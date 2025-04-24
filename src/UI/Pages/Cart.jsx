@@ -67,9 +67,12 @@ const Cart = ({ cartItems = [], setCartItems, theme, isLoggedIn }) => {
                 <div className="card-actions center">
                   <button
                     className="btn bar"
-                    onClick={() => removeFromCart(item.id)}
-                    style={{ width: "200px", height: "40px" }}
-                  >
+                    style={{
+                      backgroundColor: theme === "light" ? "red" : "red",
+                      color: theme === "light" ? "#fff" : "#fff",
+
+                    }}
+                    onClick={() => removeFromCart(item.id)}                  >
                     Remove
                   </button>
                 </div>

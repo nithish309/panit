@@ -3,7 +3,7 @@ const Footer = ({ theme }) => {
       <footer
         className="footer bg-base-300 text-base-content p-10 w-full md:h-screen lg:h-full"
         style={{
-          backgroundColor: theme === "light" ? null : "#333",
+          backgroundColor: theme === "light" ? "#e5e6e6" : "#333",
           color: theme === "light" ? "black" : "#fff",
         }}
       >
