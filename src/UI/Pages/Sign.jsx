@@ -63,7 +63,7 @@ const Sign = ({theme}) => {
       color: theme === "light" ? "black" : "#fff"
      }}>
         <h2 className="text-3xl font-bold text-center text-blue-800 mb-6">
-          Sign Up to Paint Shop
+          Sign Up
         </h2>
 
         {error && <p className="text-red-500 text-center">{error}</p>}
