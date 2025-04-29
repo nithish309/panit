@@ -70,7 +70,7 @@ const Cart = ({ cartItems = [], setCartItems, theme, isLoggedIn }) => {
                     style={{
                       backgroundColor: theme === "light" ? "red" : "red",
                       color: theme === "light" ? "#fff" : "#fff",
-                      width:"50vw"
+                      width:"200px"
 
                     }}
                     onClick={() => removeFromCart(item.id)}                  >
