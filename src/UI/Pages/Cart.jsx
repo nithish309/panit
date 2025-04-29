@@ -64,9 +64,9 @@ const Cart = ({ cartItems = [], setCartItems, theme, isLoggedIn }) => {
                 <p>Price: {item.price}</p>
                 <p>Quantity: {item.quantity}</p>
                 <p>Total: ₹ {item.totalPrice.toFixed(2)}</p>
-                <div className="card-actions center">
+                <div className="card-actions justify-center">
                   <button
-                    className="btn bar w-100"
+                    className="btn bar w-10"
                     style={{
                       backgroundColor: theme === "light" ? "red" : "red",
                       color: theme === "light" ? "#fff" : "#fff",
