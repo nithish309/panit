@@ -66,11 +66,11 @@ const Cart = ({ cartItems = [], setCartItems, theme, isLoggedIn }) => {
                 <p>Total: ₹ {item.totalPrice.toFixed(2)}</p>
                 <div className="card-actions justify-center">
                   <button
-                    className="btn bar w-10"
+                    className="btn bar"
                     style={{
                       backgroundColor: theme === "light" ? "red" : "red",
                       color: theme === "light" ? "#fff" : "#fff",
-                      width:"100%"
+                      width:"100vw"
 
                     }}
                     onClick={() => removeFromCart(item.id)}                  >
