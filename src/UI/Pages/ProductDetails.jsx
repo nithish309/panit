@@ -26,16 +26,24 @@ const ProductDetails = ({ theme }) => {
   }, [id]);
 
   // Show loading message if data is still being fetched
-  if (loading)
+  if(loading){
     return (
       <div>
+      <div className="flex justify-center items-center h-screen">
         <LoadingSpinner />
       </div>
+      {theme === "dark" ? <hr /> : null}
+      </div>
+      
     );
-
-  // If product is not found, show a message
+  }
+  else{
+     // If product is not found, show a message
   if (!product) return <div>Product not found</div>;
 
+  }
+
+ 
   return (
     <div>
       <section
